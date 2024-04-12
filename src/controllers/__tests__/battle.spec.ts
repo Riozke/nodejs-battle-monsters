@@ -15,32 +15,4 @@ describe('BattleController', () => {
       expect(response.body.length).toBeGreaterThanOrEqual(0);
     });
   });
-
-  describe('Battle', () => {
-    test('should fail when trying a battle of monsters with an undefined monster', async () => {
-      // @TODO
-    });
-
-    test('should fail when trying a battle of monsters with an inexistent monster', async () => {
-      // @TODO
-    });
-
-    test('should insert a battle of monsters successfully with monster 1 winning', async () => {
-      // @TODO
-    });
-
-    test('should insert a battle of monsters successfully with monster 2 winning', async () => {
-      // @TODO
-    });
-  });
-
-  describe('Delete Battle', () => {
-    test('should delete a battle successfully', () => {
-      // @TODO
-    });
-
-    test("should return 404 if the battle doesn't exists", () => {
-      // @TODO
-    });
-  });
 });

@@ -89,18 +89,4 @@ describe('MonsterController', () => {
       expect(response.status).toBe(StatusCodes.NOT_FOUND);
     });
   });
-
-  describe('Import CSV', () => {
-    test('should fail when importing csv file with an empty monster', () => {
-      // @TODO
-    });
-
-    test('should fail when importing csv file with wrong or inexistent columns.', () => {
-      // @TODO
-    });
-
-    test('should import all the CSV objects into the database successfully', () => {
-      // @TODO
-    });
-  });
 });

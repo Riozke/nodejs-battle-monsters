@@ -21,4 +21,5 @@ module.exports = {
   moduleNameMapper: {
     '^src/(.*)$': '<rootDir>/src/$1',
   },
+  reporters: [ 'default', 'jest-junit' ],
 };
