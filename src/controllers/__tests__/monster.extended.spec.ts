@@ -12,7 +12,7 @@ describe('MonsterExtendedController', () => {
             expect(true).toBe(false);
         });
 
-        test('should fail when importing csv file with wrong or inexistent columns.', () => {
+        test('should fail when importing csv file with wrong or inexistent columns', () => {
             // @TODO
             expect(true).toBe(false);
         });

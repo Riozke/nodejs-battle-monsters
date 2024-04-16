@@ -35,7 +35,7 @@ describe('MonsterController', () => {
       expect(response.body.id).toBe(id);
     });
 
-    test("should return 404 if monster doesn't exists", async () => {
+    test("should return 404 if monster does not exists", async () => {
       const response = await request(server).get(`/monsters/9999`);
       expect(response.status).toBe(StatusCodes.NOT_FOUND);
     });
@@ -66,7 +66,7 @@ describe('MonsterController', () => {
       expect(putResponse.status).toBe(StatusCodes.OK);
     });
 
-    test("should return 404 if monster doesn't exists", async () => {
+    test("should return 404 if monster does not exists", async () => {
       const response = await request(server).put(`/monsters/9999`);
       expect(response.status).toBe(StatusCodes.NOT_FOUND);
     });
@@ -84,7 +84,7 @@ describe('MonsterController', () => {
       expect(deleteResponse.status).toBe(StatusCodes.NO_CONTENT);
     });
 
-    test("should return 404 if monster doesn't exists", async () => {
+    test("should return 404 if monster does not exists", async () => {
       const response = await request(server).delete(`/monsters/9999`);
       expect(response.status).toBe(StatusCodes.NOT_FOUND);
     });

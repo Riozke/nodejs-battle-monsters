@@ -4,7 +4,6 @@ import { StatusCodes } from 'http-status-codes';
 
 const server = app.listen();
 
-beforeAll(() => jest.useFakeTimers());
 afterAll(() => server.close());
 
 describe('BattleController', () => {

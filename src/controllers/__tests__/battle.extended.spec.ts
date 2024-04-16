@@ -17,12 +17,12 @@ describe('BattleExtendedController', () => {
             expect(true).toBe(false);
         });
 
-        test('should insert a battle of monsters successfully with monster 1 winning', async () => {
+        test('should insert a battle of monsters successfully with monster A winning', async () => {
             // @TODO
             expect(true).toBe(false);
         });
 
-        test('should insert a battle of monsters successfully with monster 2 winning', async () => {
+        test('should insert a battle of monsters successfully with monster B winning', async () => {
             // @TODO
             expect(true).toBe(false);
         });
@@ -34,7 +34,7 @@ describe('BattleExtendedController', () => {
             expect(true).toBe(false);
         });
 
-        test("should return 404 if the battle doesn't exists", () => {
+        test("should return 404 if the battle does not exists", () => {
             // @TODO
             expect(true).toBe(false);
         });
