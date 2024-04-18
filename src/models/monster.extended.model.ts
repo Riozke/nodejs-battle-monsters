@@ -1,6 +1,6 @@
 import { Id, RelationMappings } from 'objection';
 import Base from './base';
-import { Battle } from './battle.model';
+import { Battle } from './battle.extended.model';
 
 export class Monster extends Base {
   id!: Id;
@@ -15,15 +15,6 @@ export class Monster extends Base {
   static tableName = 'monster';
 
   static get relationMappings(): RelationMappings {
-    return {
-      battles: {
-        relation: Monster.HasManyRelation,
-        modelClass: Battle,
-        join: {
-          from: 'monster.id',
-          to: 'battle.monsterA'
-        }
-      }
-    };
+    return {};
   }
 }
