@@ -4,9 +4,9 @@ import { Monster } from './monster.extended.model';
 
 export class Battle extends Base {
   id!: Id;
-  monsterA!: Monster;
-  monsterB!: Monster;
-  winner!: Monster;
+  monsterA!: Id;
+  monsterB!: Id;
+  winner!: Id;
 
   static tableName = 'battle';
 
