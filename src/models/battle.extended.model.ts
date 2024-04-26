@@ -1,12 +1,12 @@
 import { Id, RelationMappings } from 'objection';
 import Base from './base';
-import { Monster } from './monster.model';
+import { Monster } from './monster.extended.model';
 
 export class Battle extends Base {
   id!: Id;
-  monsterA!: Monster;
-  monsterB!: Monster;
-  winner!: Monster;
+  monsterA!: Id;
+  monsterB!: Id;
+  winner!: Id;
 
   static tableName = 'battle';
 
