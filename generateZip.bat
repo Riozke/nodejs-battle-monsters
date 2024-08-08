@@ -95,5 +95,7 @@ if !UNAUTHORIZED_CHANGE! equ true (
     REM Calculate the SHA256 hash of the ZIP file
     certUtil -hashfile "!FILE_NAME!" SHA256
 
+    timeout /t 2 /nobreak >nul
+
     exit /b 0
 )

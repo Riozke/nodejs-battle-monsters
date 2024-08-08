@@ -80,5 +80,7 @@ else
 
     echo -e "${WHITE}SHA256 hash: $SHA256_HASH"
 
+    sleep 2
+
     exit 0
 fi
