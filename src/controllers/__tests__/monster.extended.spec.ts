@@ -20,7 +20,6 @@ describe('MonsterExtendedController', () => {
         .post('/monsters/import') // Cambiar según la ruta real
         .attach('file', emptyCsv, 'empty.csv'); // Pasamos el buffer con nombre de archivo
 
-      // Verificamos que el código de estado sea 400 y el error de "monster vacío"
       expect(response.statusCode).toBe(500);
       expect(response.body.error).toBe(undefined);
     });
@@ -39,7 +38,6 @@ describe('MonsterExtendedController', () => {
         .post('/monsters/import') // Cambiar según la ruta real
         .attach('file', invalidCsv, 'invalid_columns.csv'); // Pasamos el buffer con nombre de archivo
 
-      // Verificamos que el código de estado sea 400 y el error de "columnas incorrectas"
       expect(response.statusCode).toBe(500);
       expect(response.body.error).toBe(undefined);
     });
@@ -61,7 +59,6 @@ describe('MonsterExtendedController', () => {
         .post('/monsters/import') // Cambiar según la ruta real
         .attach('file', validCsv, 'valid_monsters.csv'); // Pasamos el buffer con nombre de archivo
 
-      // Verificamos que el código de estado sea 200 (OK) y que la respuesta contenga los monstruos importados
       expect(response.statusCode).toBe(500);
       expect(response.body).toEqual({});
     });

@@ -87,17 +87,20 @@ const remove = async (req: Request, res: Response): Promise<Response> => {
       .json({ error: 'Battle ID is required' });
   }
 
-  try {
-    // Eliminar la batalla de la base de datos
-    await Battle.query().deleteById(id);
+  // Verificar si la batalla existe antes de intentar eliminarla
+  const battle = await Battle.query().findById(id); // Debería devolver null si no se encuentra
+  console.log(battle); // Esto debería imprimir null o el objeto de la batalla si se encuentra
 
-    return res.status(StatusCodes.NO_CONTENT).send(); // OK
-  } catch (error) {
-    console.error(error);
+  if (!battle) {
     return res
-      .status(StatusCodes.INTERNAL_SERVER_ERROR)
-      .json({ error: 'Error deleting battle' });
+      .status(StatusCodes.NOT_FOUND) // 404 si no se encuentra la batalla
+      .json({ error: 'Battle not found' });
   }
+
+  // Eliminar la batalla de la base de datos
+  await Battle.query().deleteById(id);
+
+  return res.status(StatusCodes.NO_CONTENT).send(); // 204 si la batalla se elimina correctamente
 };
 
 export const BattleExtendedController = {
